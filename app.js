@@ -23,6 +23,8 @@ $(function() {
       // Increment counter
       meshmon_counter++;
 
+      $('<tr><td>' + meshmon['provider'] + '</td><td> <time class="timeago" datetime="' + meshmon['lastupdated'] + '">' + meshmon['lastupdated'] + '</time></td></tr>').appendTo($('#lastupdated'));
+
       // Iterate over meshmon data
       meshmon['vpn-servers'].forEach(function(vpnserver_data) {
         // Short VPN hostname
