@@ -13,6 +13,9 @@ $(function() {
     dataType: 'json'
   });
 
+  $.timeago.settings.allowFuture = true;
+  $.timeago.settings.allowPast = true;
+
   // Parse response
   function parseResponse(data) {
     // Reset counter for array
@@ -24,6 +27,7 @@ $(function() {
       meshmon_counter++;
 
       $('<tr><td>' + meshmon['provider'] + '</td><td> <time class="timeago" datetime="' + meshmon['lastupdated'] + '">' + meshmon['lastupdated'] + '</time></td></tr>').appendTo($('#lastupdated'));
+      $(".timeago").timeago();
 
       // Iterate over meshmon data
       meshmon['vpn-servers'].forEach(function(vpnserver_data) {
