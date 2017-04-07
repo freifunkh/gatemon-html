@@ -1,8 +1,8 @@
-# FFHB Gatemon HTML Frontend
+# FFH Gatemon HTML Frontend
 
-This is the web frontend of the Bremen Freifunk Gateway Monitoring tool. It displays the status information that is collected by Gatemon monitoring clients.
+This is the web frontend of the Hannover Freifunk Gateway Monitoring tool. It displays the status information that is collected by Gatemon monitoring clients.
 
-Gatemon clients periodically check the status of FFHB gateway servers, and upload a report in JSON format to the web frontend, using the `put.php` page.
+Gatemon clients periodically check the status of FFH gateway servers, and upload a report in JSON format to the web frontend, using the `put.php` page.
 
 ## Building
 * download and install [Composer](https://getcomposer.org/)
@@ -11,3 +11,6 @@ Gatemon clients periodically check the status of FFHB gateway servers, and uploa
 
 ## Setup
 For every Gatemon client create a secret token file in the `token/` directory: `touch token/$(pwgen 16 1)`. The file content doesn't matter; the file name is the secret token that must be configured in the Gatemon client.
+
+## Credits
+This is a fork of FFHB Gatemon HTML Frontend (https://github.com/FreifunkBremen/gatemon-html).
